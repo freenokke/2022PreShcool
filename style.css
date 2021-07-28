@@ -1,1 +1,108 @@
-/* No CSS */
+@charset "UTF-8";
+header {
+  background: #030303;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-container {
+  padding: 74px 5px 76px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header-logo {
+  background-image: url("./assets/svg/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 195px;
+  height: 50px;
+}
+
+.header-menu {
+  max-width: 720px;
+}
+
+.header-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-menu__list a {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+
+.header-menu__list a:visited {
+  color: #FFFFFF;
+}
+
+.header-menu__item {
+  margin-right: 76px;
+}
+
+.header-menu__item:last-child {
+  margin-right: 0px;
+}
+
+/* Обнуление */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  line-height-scroll-behavior: smooth;
+}
+
+body {
+  min-width: 1920px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
