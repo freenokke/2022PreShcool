@@ -67,6 +67,10 @@ header {
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -95,7 +99,6 @@ html,
 body {
   height: 100%;
   line-height: 1;
-  line-height-scroll-behavior: smooth;
 }
 
 body {
@@ -105,4 +108,67 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Forum', cursive;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.welcome {
+  color: #FFFFFF;
+  background: #030303;
+  font-family: 'Roboto', sans-serif;
+  height: 750px;
+  background-image: url("./assets/img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: right;
+  margin-top: -1px;
+}
+
+.welcome .container {
+  height: 100%;
+  width: 100%;
+  padding-top: 114px;
+  padding-bottom: 246px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.welcome-text {
+  margin-top: 26px;
+  margin-bottom: 76px;
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 33px;
+  letter-spacing: 2px;
+}
+
+.welcome-button {
+  line-height: 75px;
+  background: #710707;
+  border-radius: 10px;
+  text-align: center;
+  height: 75px;
+  width: 360px;
+  font-weight: 100;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #FFFFFF;
+}
+
+.welcome-button:visited {
+  color: #FFFFFF;
 }
