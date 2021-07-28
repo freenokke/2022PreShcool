@@ -119,6 +119,19 @@ body {
   text-transform: uppercase;
 }
 
+.underline-title {
+  position: relative;
+}
+
+.underline-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
+}
+
 .welcome {
   color: #FFFFFF;
   background: #030303;
@@ -256,22 +269,57 @@ body {
 .visiting-card .underline-title {
   width: 300px !important;
   margin-bottom: 10px;
-  height: 2px;
+  height: 1px;
 }
 
 .visiting-card .underline-title::after {
   height: 2px !important;
 }
 
-.underline-title {
-  position: relative;
+.explore {
+  color: #fff;
+  background: #030303;
+  height: 865px;
 }
 
-.underline-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #710707;
+.explore .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 60px;
+          column-gap: 60px;
+  padding: 75px 0;
+}
+
+.explore-title {
+  margin-bottom: 25px;
+}
+
+.explore .underline-title {
+  height: 1px;
+  margin-bottom: 75px;
+}
+
+.explore-description__text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+  margin-bottom: 25px;
+}
+
+.explore-description__text:last-child {
+  margin-bottom: 0;
+}
+
+.explore-description__text span {
+  color: #CAAA7D;
+}
+
+.explore__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 15px;
 }
