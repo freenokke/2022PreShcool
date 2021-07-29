@@ -323,3 +323,108 @@ body {
      object-fit: contain;
   padding-top: 15px;
 }
+
+.video {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  padding: 90px 0px 75px;
+}
+
+.video .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-content__toolbar {
+  margin-bottom: 40px;
+  height: 85px;
+  background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 41px;
+}
+
+.video-content__toolbar img:nth-child(1) {
+  height: 30px;
+  width: 27px;
+  margin-right: 41px;
+}
+
+.video-content__toolbar img:nth-child(2) {
+  width: 23px;
+  height: 30px;
+  margin-right: 41px;
+}
+
+.video-content__toolbar img:nth-child(3) {
+  height: 30px;
+  width: 27px;
+  margin-right: 41px;
+}
+
+.video-content__toolbar img:nth-child(5) {
+  width: 38px;
+  height: 30px;
+  margin-right: 20px;
+  margin-left: 41px;
+}
+
+.video-content__toolbar img:nth-child(7) {
+  width: 36px;
+  height: 36px;
+  margin-left: 48px;
+}
+
+.video-content__video-image {
+  display: block;
+  position: relative;
+}
+
+.video-content__video-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.video-content__video-image::after {
+  content: "";
+  height: 220px;
+  width: 220px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  background-image: url("./assets/img/video/play_icon.svg");
+}
+
+.video-textcontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 114px;
+          column-gap: 114px;
+}
+
+.video-textcontent__description {
+  max-width: 720px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 38px;
+}
+
+.video-textcontent__title {
+  max-width: 606px;
+  color: #9D8665;
+}
