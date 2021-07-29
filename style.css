@@ -428,3 +428,91 @@ body {
   max-width: 606px;
   color: #9D8665;
 }
+
+.tickets {
+  background: #030303;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  padding: 75px 0;
+}
+
+.tickets__title {
+  margin-bottom: 25px;
+}
+
+.tickets .underline-title {
+  margin-bottom: 75px;
+  height: 1px;
+}
+
+.tickets-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tickets-content__image {
+  margin-right: 60px;
+}
+
+.tickets-content-radio__title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+
+.tickets-content-radio__list .radio-button {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.tickets-content-radio__list .radio-button:last-child {
+  margin-bottom: 0;
+}
+
+.tickets-content-radio__list .radio-button label {
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.tickets-content-radio__list .radio-button label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.tickets-content-radio__list .radio-button .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.tickets-content-radio__list .radio-button .checkmark::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -50%);
+          transform: translate(-40%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+  display: none;
+}
+
+.tickets-content-radio__list #radio_1, .tickets-content-radio__list #radio_2, .tickets-content-radio__list #radio_3 {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.tickets-content-counter {
+  width: 150px;
+  border: 3px solid #fff;
+  height: 50px;
+}

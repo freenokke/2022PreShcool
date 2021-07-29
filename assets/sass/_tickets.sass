@@ -1,0 +1,64 @@
+.tickets
+    background: #030303
+    font-family: 'Roboto', sans-serif
+    color: #fff
+    padding: 75px 0
+    &__title
+        margin-bottom: 25px
+    .underline-title
+        margin-bottom: 75px
+        height: 1px
+    &-content
+        display: flex
+        &__image
+            margin-right: 60px
+        &-radio
+            &__title
+                font-weight: bold
+                font-size: 28px
+                line-height: 33px
+                margin-bottom: 50px
+            &__list
+                .radio-button
+                    margin-bottom: 50px
+                    position: relative
+                    &:last-child
+                        margin-bottom: 0
+                    label
+                        cursor: pointer
+                        margin-left: 40px
+                        input:checked ~ .checkmark::after // выбрать псевдоэлементы after элемента с классом .checkmak, которые идут после input c атрибутом checked
+                            display: block      
+                    .checkmark 
+                        position: absolute
+                        top: 0
+                        left: 0
+                        height: 17px
+                        width: 17px
+                        border: 2px solid #fff  
+                        border-radius: 50%
+                        &::after
+                            content: ""
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-40%, -50%)
+                            width: 7px
+                            height: 7px
+                            border-radius: 50%
+                            background: white
+                            display: none
+                        
+
+                #radio_1, #radio_2, #radio_3
+                    position: absolute
+                    z-index: -1
+                    opacity: 0
+                    cursor: pointer
+        &-calc
+            &__title
+            &__text
+        &-counter
+            width: 150px
+            border: 3px solid #fff 
+            height: 50px    
