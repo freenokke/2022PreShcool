@@ -434,6 +434,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #fff;
   padding: 75px 0;
+  height: 893px;
 }
 
 .tickets__title {
@@ -449,6 +450,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .tickets-content__image {
@@ -459,11 +461,11 @@ body {
   font-weight: bold;
   font-size: 28px;
   line-height: 33px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .tickets-content-radio__list .radio-button {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   position: relative;
 }
 
@@ -511,8 +513,117 @@ body {
   cursor: pointer;
 }
 
+.tickets-content-calc {
+  margin-left: auto;
+}
+
+.tickets-content-calc__title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 11px;
+  text-align: right;
+}
+
+.tickets-content-calc__title:nth-child(6) {
+  margin-top: 50px;
+}
+
+.tickets-content-calc__text {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 14px;
+}
+
+.tickets-content__button {
+  background: #FFFFFF;
+  border-radius: 2px;
+  width: 175px;
+  height: 50px;
+  position: absolute;
+  right: 0;
+  bottom: 108px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  cursor: pointer;
+}
+
 .tickets-content-counter {
   width: 150px;
   border: 3px solid #fff;
   height: 50px;
+  padding: 3px 11px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+
+.tickets-content-counter button {
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.tickets-content-counter .calc-number {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.contacts {
+  font-family: 'Roboto', sans-serif;
+  color: #000;
+  padding: 75px 0;
+}
+
+.contacts__title {
+  color: #9D8665;
+  margin-bottom: 25px;
+}
+
+.contacts .underline-title {
+  height: 1px;
+  margin-bottom: 75px;
+}
+
+.contacts-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-content-text {
+  max-width: 282px;
+}
+
+.contacts-content-text__title {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  margin-bottom: 36px;
+}
+
+.contacts-content-text__contact {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.contacts-content-text__contact:last-child {
+  margin-bottom: 0;
 }
