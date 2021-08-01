@@ -31,14 +31,14 @@
         </div>
     </header>
     <main>
-        <section class="welcome">
+        <section id="welcome">
             <div class="container">
-                <h2 class="welcome-title section-title">Welcome <br/> to the Louvre</h2>
+                <h1 class="welcome-title section-title">Welcome <br/> to the Louvre</h1>
                 <p class="welcome-text">From the castle to the museum</p>
                 <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" class="welcome-button">Discover the Louvre</a>
             </div>
         </section>
-        <section class="visiting">
+        <section id="visiting">
             <div class="container">
                 <h2 class="section-title visiting-title">Virtual Tour</h2>
                 <div class="underline-title"></div>
@@ -94,7 +94,7 @@
                     <h2 class="explore-title section-title">Picture Explore</h2>
                     <div class="underline-title"></div>
                     <p class="explore-description__text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
-                    <p class="explore-description__text">It was cleaned in 1984 to remove a <span>"yellow veil"</span>of dust that had gathered since the previous restoration in the 19th century.</p>
+                    <p class="explore-description__text">It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
                     <p class="explore-description__text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
                 </div>
                 <div class="explore__image">
@@ -135,21 +135,21 @@
                         <ul class="tickets-content-radio__list">
                             <li class="radio-button">
                                 <label for="radio_1">
-                                    <input type="radio" id="radio_1" checked="checked">
+                                    <input type="radio" name="radio" id="radio_1" checked>
                                     <span class="checkmark"></span>
                                     Permanent exhibition
                                 </label>
                             </li>
                             <li class="radio-button">
                                 <label for="radio_2">
-                                    <input type="radio" id="radio_2">
+                                    <input type="radio" name="radio" id="radio_2">
                                     <span class="checkmark"></span>
                                     Temporary exhibition
                                 </label>
                             </li>
                             <li class="radio-button">
                                 <label for="radio_3">
-                                    <input type="radio" id="radio_3">
+                                    <input type="radio" name="radio" id="radio_3">
                                     <span class="checkmark"></span>
                                     Combined Admission
                                 </label>
@@ -160,32 +160,19 @@
                         <h4 class="tickets-content-calc__title">Amount</h4>
                         <p class="tickets-content-calc__text">Basic 18+</p>
                         <div class="tickets-content-counter">
-                            <button>
-                                <svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
-                                </svg>
+                            <button type="button" onclick="this.nextElementSibling.stepDown()">-
                             </button>
-                            <span class="calc-number">1</span>
-                            <button>
-                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
-                                </svg>
+                            <input type="number" min="0" max="20" value="1" readonly class="calc-number">
+                            <button type="button" onclick="this.previousElementSibling.stepUp()">+
                             </button>
                         </div>
                         <p class="tickets-content-calc__text">Senior 65+</p>
                         <div class="tickets-content-counter">
-                            <button>
-                                <svg width="16" height="3" viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.6875 2.82812H0.03125V0.46875H15.6875V2.82812Z" fill="white"/>
-                                </svg> 
-                            </button>   
-                            <span class="calc-number">1</span>
-                            <button>
-                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.89062 6.79688H16.2344V9.53125H9.89062V16.7188H6.98438V9.53125H0.640625V6.79688H6.98438V0.15625H9.89062V6.79688Z" fill="white"/>
-                                </svg>
+                            <button type="button" onclick="this.nextElementSibling.stepDown()">-
                             </button>
-                                
+                            <input type="number" min="0" max="20" value="1" readonly class="calc-number">
+                            <button type="button" onclick="this.previousElementSibling.stepUp()">+
+                            </button>
                         </div>
                         <h4 class="tickets-content-calc__title">Total €220</h4>
                     </div>
@@ -205,7 +192,7 @@
                         <p class="contacts-content-text__contact">mail: info@louvre.fr</p>
                     </div>
                     <div class="contact-context-map">
-                        <img src="./assets/img/contacts/map.jpg" alt="map">
+                        <img src="./assets/img/contacts/map.png" alt="map">
                     </div>
                 </div>
             </div>
@@ -216,16 +203,16 @@
             <div class="footer-logo"></div>
             <nav class="footer-nav_1">
                 <ul>
-                    <li><a href="#">Welcome</a></li>
-                    <li><a href="#">Visiting</a></li>
-                    <li><a href="#">Explore</a></li>
+                    <li><a href="#welcome">Welcome</a></li>
+                    <li><a href="#visiting">Visiting</a></li>
+                    <li><a href="#explore">Explore</a></li>
                 </ul>
             </nav>
             <nav class="footer-nav_2">
                 <ul>
-                    <li><a href="#">Video</a></li>
-                    <li><a href="#">Tickets</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#tickets">Tickets</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
             <div class="footer-social_links">

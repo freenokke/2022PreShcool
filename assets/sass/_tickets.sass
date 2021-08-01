@@ -5,7 +5,7 @@
     padding: 75px 0
     height: 893px
 .underline-title
-    margin-bottom: 75px
+    margin-bottom: 77px
     height: 1px
 .tickets
     &__title
@@ -68,7 +68,7 @@
                 font-weight: bold
                 font-size: 28px
                 line-height: 33px
-                margin-bottom: 11px
+                margin-bottom: 14px
                 text-align: right
                 &:nth-child(6)
                     margin-top: 50px
@@ -91,6 +91,9 @@
             line-height: 26px
             cursor: pointer
             padding: 5px 8px 0px 0px
+            transition: 0.2s all
+            &:hover
+                background: #9D8665
         &-counter
             width: 150px
             border: 3px solid #fff 
@@ -101,11 +104,23 @@
             align-items: center
             margin-bottom: 35px
             button
+                color: #fff
                 background: none
                 display: flex
                 cursor: pointer
+                font-size: 32px
+                line-height: 37px
+                font-weight: normal
+                padding-bottom: 5px
+                &:hover
+                    filter: invert(63%) sepia(99%) saturate(454%) hue-rotate(3deg) brightness(113%) contrast(102%)
             .calc-number
                 font-weight: 300
                 font-size: 22px
-                line-height: 26px  
+                line-height: 26px
+                background: #000
+                color: #fff
+                width: 50px
+                text-align: center
+                padding-left: 10px
 
