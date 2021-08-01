@@ -627,3 +627,116 @@ body {
 .contacts-content-text__contact:last-child {
   margin-bottom: 0;
 }
+
+.footer {
+  background: #030303;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  padding: 75px 0;
+}
+
+.footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer-logo {
+  background-image: url("./assets/svg/logo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 195px;
+  height: 50px;
+  margin-right: 145px;
+}
+
+.footer-nav_1 {
+  margin-right: 153px;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+
+.footer-nav_1 a {
+  color: #fff;
+}
+
+.footer-nav_2 {
+  margin-right: 405px;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 50px;
+  letter-spacing: 2px;
+}
+
+.footer-nav_2 a {
+  color: #fff;
+}
+
+.footer-social_links {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.footer-social_links__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.footer-social_links__item {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #666666;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 0px #666666);
+          filter: drop-shadow(0px 0px 0px #666666);
+  border-radius: 50px;
+  margin-right: 24px;
+}
+
+.footer-social_links__item:last-child {
+  margin-right: 0;
+}
+
+.footer-social_links__item .social-link {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.footer-social_links__item .youtube {
+  background-image: url("./assets/img/footer/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer-social_links__item .instagram {
+  background-image: url("./assets/img/footer/instagram.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer-social_links__item a.facebook {
+  background-image: url("./assets/img/footer/facebook.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer-social_links__item .twitter {
+  background-image: url("./assets/img/footer/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer-social_links__item .pinterest {
+  background-image: url("./assets/img/footer/Pinterest.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
