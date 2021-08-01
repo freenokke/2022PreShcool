@@ -1,14 +1,15 @@
-.tickets
+#tickets
     background: #030303
     font-family: 'Roboto', sans-serif
     color: #fff
     padding: 75px 0
     height: 893px
+.underline-title
+    margin-bottom: 75px
+    height: 1px
+.tickets
     &__title
         margin-bottom: 25px
-    .underline-title
-        margin-bottom: 75px
-        height: 1px
     &-content
         display: flex
         position: relative
@@ -19,21 +20,25 @@
                 font-weight: bold
                 font-size: 28px
                 line-height: 33px
-                margin-bottom: 60px
+                margin-bottom: 54px
             &__list
                 .radio-button
-                    margin-bottom: 60px
+                    margin-bottom: 50px
                     position: relative
                     &:last-child
                         margin-bottom: 0
                     label
                         cursor: pointer
                         margin-left: 40px
+                        font-weight: 300
+                        font-size: 22px
+                        line-height: 26px
                         input:checked ~ .checkmark::after // выбрать псевдоэлементы after элемента с классом .checkmak, которые идут после input c атрибутом checked
                             display: block      
                     .checkmark 
                         position: absolute
-                        top: 0
+                        top: 50%
+                        transform: translate(0, -50%)
                         left: 0
                         height: 17px
                         width: 17px
@@ -44,7 +49,7 @@
                             position: absolute
                             top: 50%
                             left: 50%
-                            transform: translate(-40%, -50%)
+                            transform: translate(-50%, -50%)
                             width: 7px
                             height: 7px
                             border-radius: 50%
@@ -67,6 +72,7 @@
                 text-align: right
                 &:nth-child(6)
                     margin-top: 50px
+                    letter-spacing: 1px
             &__text
                 font-weight: 300
                 font-size: 22px
@@ -79,11 +85,12 @@
             height: 50px
             position: absolute
             right: 0
-            bottom: 108px
+            bottom: 106px
             font-weight: 300
             font-size: 22px
             line-height: 26px
             cursor: pointer
+            padding: 5px 8px 0px 0px
         &-counter
             width: 150px
             border: 3px solid #fff 
