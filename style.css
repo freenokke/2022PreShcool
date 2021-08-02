@@ -377,35 +377,63 @@ body {
   padding: 0 41px;
 }
 
-.video-content__toolbar img:nth-child(1) {
+.video-content__toolbar button {
+  cursor: pointer;
+}
+
+.video-content__toolbar button:hover {
+  -webkit-filter: invert(71%) sepia(0%) saturate(1057%) hue-rotate(236deg) brightness(84%) contrast(101%);
+          filter: invert(71%) sepia(0%) saturate(1057%) hue-rotate(236deg) brightness(84%) contrast(101%);
+}
+
+.video-content__toolbar button:nth-child(1) {
   height: 30px;
   width: 27px;
   margin-right: 41px;
+  background-image: url("./assets/img/video/toolbar-icon-previous.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
 }
 
-.video-content__toolbar img:nth-child(2) {
+.video-content__toolbar button:nth-child(2) {
   width: 23px;
   height: 30px;
   margin-right: 41px;
+  background-image: url("./assets/img/video/toolbar-icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
 }
 
-.video-content__toolbar img:nth-child(3) {
+.video-content__toolbar button:nth-child(3) {
   height: 30px;
   width: 27px;
   margin-right: 41px;
+  background-image: url("./assets/img/video/toolbar-icon-next.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
 }
 
-.video-content__toolbar img:nth-child(5) {
+.video-content__toolbar button:nth-child(5) {
   width: 38px;
   height: 30px;
   margin-right: 20px;
   margin-left: 41px;
+  background-image: url("./assets/img/video/toolbar-icon-volume.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
 }
 
-.video-content__toolbar img:nth-child(7) {
+.video-content__toolbar button:nth-child(7) {
   width: 36px;
   height: 36px;
   margin-left: 48px;
+  background-image: url("./assets/img/video/toolbar-icon-fullscreen.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .video-content__video-image {
@@ -418,16 +446,24 @@ body {
   width: 100%;
 }
 
-.video-content__video-image::after {
-  content: "";
+.video-content__video-image .main_play_button {
+  position: absolute;
   height: 220px;
   width: 220px;
-  position: absolute;
   left: 50%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  top: 50%;
   background-image: url("./assets/img/video/play_icon.svg");
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.video-content__video-image .main_play_button:hover {
+  -webkit-filter: invert(55%) sepia(21%) saturate(573%) hue-rotate(356deg) brightness(95%) contrast(85%) opacity(85%);
+          filter: invert(55%) sepia(21%) saturate(573%) hue-rotate(356deg) brightness(95%) contrast(85%) opacity(85%);
 }
 
 .video-textcontent {
