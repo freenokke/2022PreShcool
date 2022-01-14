@@ -47,4 +47,10 @@ body
 	padding: 0 20px
 
 
-.section-title
+
+
+@mixin container($max-width, $paddingT, $paddingL, $paddingB, $paddingR, $marginT, $marginL, $marginB, $marginR)
+	max-width: $max-width
+	margin: $marginT $marginL $marginB $marginR
+	padding: $paddingT $paddingL $paddingB $paddingR
+
