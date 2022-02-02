@@ -31,7 +31,7 @@ body
     &:hover
         filter: none
     &__track-img
-        background-image: url(./img/dontstartnow.png)
+        background-image: url(./img/lyusya-chebotina.jpg)
         background-repeat: no-repeat
         background-size: contain
         width: 220px
@@ -39,61 +39,56 @@ body
         border-radius: 50%
     &__toolbar
         display: flex
-        flex-direction: column
+        flex-direction: row
         align-items: center
-        row-gap: 20px
-    &__input
-        width: 250px
-    &__handle
-        display: flex
-        align-items: center
-        justify-content: center
         column-gap: 15px
-    &__button
-        &.previous
-            width: 30px
-            height: 30px
-            background-image: url(./svg/play-prev.svg)
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: contain
-            background-color: transparent
-            border: 0
-            outline: 0
-            opacity: .8
-            cursor: pointer
-            transition: .3s
-            &:hover
-                opacity: 1
-        &.play
-            width: 50px
-            height: 50px
-            background-image: url(./svg/play.svg)
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: contain
-            background-color: transparent
-            border: 0
-            outline: 0
-            opacity: .8
-            cursor: pointer
-            transition: .3s
-            &:hover
-                opacity: 1
-        &.next
-            width: 30px
-            height: 30px
-            background-image: url(./svg/play-next.svg)
-            background-repeat: no-repeat
-            background-position: center center
-            background-size: contain
-            background-color: transparent
-            border: 0
-            outline: 0
-            opacity: .8
-            cursor: pointer
-            transition: .3s
-            &:hover
-                opacity: 1
+        .toolbar
+            &__previous-btn
+                width: 30px
+                height: 30px
+                background-image: url(./svg/play-prev.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .8
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+            &__play-btn
+                width: 50px
+                height: 50px
+                background-image: url(./svg/play.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .8
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+            &__next-btn
+                width: 30px
+                height: 30px
+                background-image: url(./svg/play-next.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .8
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+    &__track-progress
+        & > input
+            width: 250px
 
-        
