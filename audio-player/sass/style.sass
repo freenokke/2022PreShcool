@@ -1,0 +1,95 @@
+*
+    box-sizing: border-box
+body
+    min-height: 100vh
+    overflow-y: hidden
+    background: linear-gradient(#30373D 50%, #556370)
+    background-size: cover
+    position: relative
+    color: #fff
+    
+.player
+    position: absolute
+    // max-width: 300px
+    // max-height: 600px
+    width: 300px
+    height: 600px
+    border-radius: 20px
+    background: linear-gradient(#4A6F7B,#22292C,)
+    right: 50%
+    top: 50%
+    transform: translate(50%, -50%)
+    overflow: hidden
+    display: flex
+    row-gap: 30px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    box-shadow: 0 0 10px #000000
+    // filter: blur(3px)
+    transition: .5s
+    &:hover
+        filter: none
+    &__track-img
+        background-image: url(./img/lyusya-chebotina.jpg)
+        background-repeat: no-repeat
+        background-size: contain
+        width: 250px
+        height: 250px
+        border-radius: 50%
+    &__toolbar
+        display: flex
+        flex-direction: row
+        align-items: center
+        column-gap: 15px
+        .toolbar
+            &__previous-btn
+                width: 30px
+                height: 30px
+                background-image: url(./svg/play-prev.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .5
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+            &__play-btn
+                width: 50px
+                height: 50px
+                background-image: url(./svg/play.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .5
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+            &__next-btn
+                width: 30px
+                height: 30px
+                background-image: url(./svg/play-next.svg)
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: contain
+                background-color: transparent
+                border: 0
+                outline: 0
+                opacity: .5
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    opacity: 1
+    &__track-progress
+        & > input
+            width: 250px
+            cursor: pointer
+
