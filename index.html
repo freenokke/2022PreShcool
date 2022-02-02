@@ -9,6 +9,28 @@
     <script defer src="./js/index.js"></script>
 </head>
 <body>
-    <div class="player"></div>
+    <div class="player">
+        <audio src="./audio/lusia.mp3" class="player__audio"></audio>
+        <div class="player__track-info">
+            <div class="track-info__name"></div>
+            <div class="track-info__author"></div>
+        </div>
+        <div class="player__track-time">
+            <span class="track-time__current"></span>
+            <span>|</span>
+            <span class="track-time__total"></span>
+        </div>
+        <div src="./img/lyusya-chebotina.jpg" class="player__track-img"></div>
+        <div class="player__track-progress">
+            <input type="range">
+        </div>
+        <div class="player__toolbar">
+            <button type="button" class="toolbar__previous-btn"></button>
+            <button type="button" class="toolbar__play-btn"></button>
+            <button type="button" class="tollbar__next-btn"></button>
+        </div>
+
+    </div>
+
 </body>
 </html>
