@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900)    
 *
     box-sizing: border-box
 body
@@ -7,7 +8,9 @@ body
     background-size: cover
     position: relative
     color: #fff
-    
+    font-family: Roboto Slab
+    font-weight: 400  
+    font-size: 16px
 .player
     position: absolute
     // max-width: 300px
@@ -30,6 +33,10 @@ body
     transition: .5s
     &:hover
         filter: none
+    &__track-time
+        display: flex
+        column-gap: 10px
+        align-items: center
     &__track-img
         background-image: url(./img/lyusya-chebotina.jpg)
         background-repeat: no-repeat
@@ -59,8 +66,8 @@ body
                 &:hover
                     opacity: 1
             &__play-btn
-                width: 50px
-                height: 50px
+                width: 55px
+                height: 55px
                 background-image: url(./svg/play.svg)
                 background-repeat: no-repeat
                 background-position: center center
@@ -92,4 +99,6 @@ body
         & > input
             width: 250px
             cursor: pointer
+            border: none
+            outline: none
 
