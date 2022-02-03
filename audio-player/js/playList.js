@@ -1,14 +1,14 @@
 const playList = [
 {      
-    author: 'Galibri & Mavik',
-    title: 'Федерико Феллини',
-    src: './audio/felini.mp3',
-},  
-{      
     author: 'Люся Чеботина',
     title: 'Монако',
     src: './audio/lusia.mp3',
 },
+{      
+    author: 'Galibri & Mavik',
+    title: 'Федерико Феллини',
+    src: './audio/felini.mp3',
+},  
 {      
     author: 'MiyaGi',
     title: 'Самурай',
