@@ -63,6 +63,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0.8;
+}
+
+.player__track-time .total-time {
+  color: #C6A780;
 }
 
 .player__track-img {
