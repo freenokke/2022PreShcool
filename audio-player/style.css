@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900);
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -11,6 +12,9 @@ body {
   background-size: cover;
   position: relative;
   color: #fff;
+  font-family: Roboto Slab;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 .player {
@@ -56,6 +60,9 @@ body {
   display: flex;
   -webkit-column-gap: 10px;
           column-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .player__track-img {
@@ -103,8 +110,8 @@ body {
 }
 
 .player__toolbar .toolbar__play-btn {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   background-image: url(./svg/play.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -145,4 +152,6 @@ body {
 .player__track-progress > input {
   width: 250px;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
