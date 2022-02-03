@@ -1,5 +1,8 @@
+import playList from "./playList.js";
+
 //объявление переменных
-const audio = new Audio('./audio/lusia.mp3');
+const audio = new Audio(playList[0].src);
+// console.log("🚀 ~ file: index.js ~ line 5 ~ playList[0].src", playList[0].src)
 const progressBar = document.querySelector('input');
 const prevBtn = document.querySelector('.toolbar__previous-btn')
 const playBtn = document.querySelector('.toolbar__play-btn')
@@ -20,39 +23,47 @@ function updateProgress(e) {
     progressBar.value = e.srcElement.currentTime
 }
 
+function updateProgressOnClick() {
+    audio.currentTime = this.value;
+}
 
-function updateTime() {
-    currentTimeMinutes.textContent = Math.trunc(audio.currentTime / 60).toString().padStart('2', 0)
-    currentTimeSeconds.textContent = Math.trunc(audio.currentTime % 60).toString().padStart('2', 0)
+function nextAudio() {
+        audio.src = playList[1].src
+        audio.play()
     
 }
 
-function updateProgressOnClick() {
-    audio.currentTime = this.value;
+function previousAudio() {
+
 }
 
 //Обработчики
     //Обновление прогресса трека от текущего времени
 audio.addEventListener('timeupdate', updateProgress);
 
-    //Обновление текущего времени трека
-audio.addEventListener('timeupdate', updateTime);
-
     //Работа кнопок
 playBtn.addEventListener('click', togglePlayAudio);
+nextBtn.addEventListener('click', nextAudio);
 
     //Изменение прогресса трека по клику
 progressBar.addEventListener('input', updateProgressOnClick);
 
-    //Подгрузка продолжительности трека в инпут при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
+//подгрузка значений продолжительности трека и запуск обработчика событий текущего времени
+audio.addEventListener('loadeddata', (e) => {
     progressBar.setAttribute('max', audio.duration);
+    function updateTime(ev) {
+        currentTimeMinutes.textContent = Math.trunc(audio.currentTime / 60).toString().padStart('2', 0)
+        currentTimeSeconds.textContent = Math.trunc(audio.currentTime % 60).toString().padStart('2', 0)
+    }
     totalTimeMinutes.textContent = '0' + Math.trunc(audio.duration / 60)
     totalTimeSeconds.textContent = Math.trunc(audio.duration % 60)
-
+    
+    //Обновление текущего времени трека
+    audio.addEventListener('timeupdate', updateTime);
 })
 
-    //Подгрузка продолжительности трека в инпут при изменении трека
-audio.addEventListener('durationchange', () => {
-    progressBar.setAttribute('max', audio.duration);
-})
+//     //Подгрузка продолжительности трека в инпут при изменении трека
+// audio.addEventListener('durationchange', () => {
+//     audioDuration = audio.duration
+//     progressBar.setAttribute('max', audio.duration);
+// })
