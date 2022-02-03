@@ -19,12 +19,6 @@ function updateProgress(e) {
     progressBar.value = e.srcElement.currentTime
 }
 
-function updateTime() {
-    currentTimeMinutes.textContent = Math.trunc(audio.currentTime / 60).toString().padStart('2', 0)
-    currentTimeSeconds.textContent = Math.trunc(audio.currentTime % 60).toString().padStart('2', 0)
-    
-}
-
 function updateProgressOnClick() {
     audio.currentTime = this.value;
 }
@@ -33,24 +27,28 @@ function updateProgressOnClick() {
     //Обновление прогресса трека от текущего времени
 audio.addEventListener('timeupdate', updateProgress);
 
-    //Обновление текущего времени трека
-audio.addEventListener('timeupdate', updateTime);
-
     //Работа кнопок
 playBtn.addEventListener('click', togglePlayAudio);
 
     //Изменение прогресса трека по клику
 progressBar.addEventListener('input', updateProgressOnClick);
 
-    //Подгрузка продолжительности трека в инпут при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
+//подгрузка значений продолжительности трека и запуск обработчика событий текущего времени
+audio.addEventListener('loadeddata', () => {
     progressBar.setAttribute('max', audio.duration);
+    function updateTime() {
+        currentTimeMinutes.textContent = Math.trunc(audio.currentTime / 60).toString().padStart('2', 0)
+        currentTimeSeconds.textContent = Math.trunc(audio.currentTime % 60).toString().padStart('2', 0)
+    }
     totalTimeMinutes.textContent = '0' + Math.trunc(audio.duration / 60)
     totalTimeSeconds.textContent = Math.trunc(audio.duration % 60)
-
+    
+    //Обновление текущего времени трека
+    audio.addEventListener('timeupdate', updateTime);
 })
 
-    //Подгрузка продолжительности трека в инпут при изменении трека
-audio.addEventListener('durationchange', () => {
-    progressBar.setAttribute('max', audio.duration);
-})
+//     //Подгрузка продолжительности трека в инпут при изменении трека
+// audio.addEventListener('durationchange', () => {
+//     audioDuration = audio.duration
+//     progressBar.setAttribute('max', audio.duration);
+// })
