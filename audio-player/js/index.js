@@ -56,14 +56,21 @@ function nextAudio() {
 function previousAudio() {
     const track = playList.find((item) => audio.src.includes(item.src.substring(1)));
     const pos = playList.indexOf(track);
-    if (pos < playList.length - 1) {
-        audio.src = playList[pos+1].src
-        trackAuthor.textContent = playList[pos+1].author
-        trackName.textContent = playList[pos+1].title
+    if (pos < playList.length - 1 && pos > 0) {
+        audio.src = playList[pos-1].src
+        trackAuthor.textContent = playList[pos-1].author
+        trackName.textContent = playList[pos-1].title
+        trackIMG.style.backgroundImage = `url(${playList[pos-1].poster})`;
+    } else if(pos == 0) {
+        audio.src = playList[playList.length - 1].src
+        trackAuthor.textContent = playList[playList.length - 1].author
+        trackName.textContent = playList[playList.length - 1].title
+        trackIMG.style.backgroundImage = `url(${playList[playList.length - 1].poster})`;
     } else {
-        audio.src = playList[0].src
-        trackAuthor.textContent = playList[0].author
-        trackName.textContent = playList[0].title
+        audio.src = playList[pos-1].src
+        trackAuthor.textContent = playList[pos-1].author
+        trackName.textContent = playList[pos-1].title
+        trackIMG.style.backgroundImage = `url(${playList[pos-1].poster})`;
     }    
     audio.play()
 }
