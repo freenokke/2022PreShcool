@@ -17,6 +17,12 @@ const trackIMG = document.querySelector('.player__track-img')
 function togglePlayAudio() {
     let method = audio.paused ? 'play' : 'pause';
     audio[method]();
+    changePlayIcon()
+}
+
+function changePlayIcon() {
+    if (audio.played) {playBtn.style.backgroundImage = `url(./svg/pause.svg)`}
+    if (audio.paused) {playBtn.style.backgroundImage = `url(./svg/play.svg)`}
 }
 
 function updateProgress(e) {
