@@ -11,6 +11,8 @@ const totalTimeMinutes = document.querySelector('.total-time__minutes')
 const totalTimeSeconds = document.querySelector('.total-time__seconds')
 const currentTimeMinutes = document.querySelector('.current-time__minutes')
 const currentTimeSeconds = document.querySelector('.current-time__seconds')
+const trackName = document.querySelector('.track-info__name')
+const trackAuthor = document.querySelector('.track-info__author')
 
 function togglePlayAudio() {
     let method = audio.paused ? 'play' : 'pause';
@@ -32,8 +34,12 @@ function nextAudio() {
     
     if (pos < playList.length - 1) {
         audio.src = playList[pos+1].src
+        trackAuthor.textContent = playList[pos+1].author
+        trackName.textContent = playList[pos+1].title
     } else {
         audio.src = playList[0].src
+        trackAuthor.textContent = playList[0].author
+        trackName.textContent = playList[0].title
     }
     audio.play()
 }
@@ -41,15 +47,22 @@ function nextAudio() {
 function previousAudio() {
     const track = playList.find((item) => audio.src.includes(item.src.substring(1)));
     const pos = playList.indexOf(track);
-    console.log("🚀 ~ file: index.js ~ line 32 ~ nextAudio ~ pos", pos)
-    
     if (pos < playList.length - 1) {
         audio.src = playList[pos+1].src
+        trackAuthor.textContent = playList[pos+1].author
+        trackName.textContent = playList[pos+1].title
     } else {
         audio.src = playList[0].src
-    }
-    
+        trackAuthor.textContent = playList[0].author
+        trackName.textContent = playList[0].title
+    }    
     audio.play()
+}
+
+function preload() {
+    audio.src = playList[0].src
+    trackAuthor.textContent = playList[0].author
+    trackName.textContent = playList[0].title
 }
 
 //Обработчики
@@ -59,7 +72,7 @@ audio.addEventListener('timeupdate', updateProgress);
     //Работа кнопок
 playBtn.addEventListener('click', togglePlayAudio);
 nextBtn.addEventListener('click', nextAudio);
-nextBtn.addEventListener('click', nextAudio);
+prevBtn.addEventListener('click', previousAudio);
 
     //Изменение прогресса трека по клику
 progressBar.addEventListener('input', updateProgressOnClick);
@@ -78,7 +91,7 @@ audio.addEventListener('loadeddata', (e) => {
     audio.addEventListener('timeupdate', updateTime);
 })
     //Подгрузка первого трека при загрузке / обновлении страницы
-document.addEventListener('DOMContentLoaded', () => audio.src = playList[0].src)
+document.addEventListener('DOMContentLoaded', preload)
 //     //Подгрузка продолжительности трека в инпут при изменении трека
 // audio.addEventListener('durationchange', () => {
 //     audioDuration = audio.duration
