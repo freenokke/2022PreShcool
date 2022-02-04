@@ -43,8 +43,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0 0 10px #000000;
-          box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 20px #000000;
+          box-shadow: 0 0 20px #000000;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -52,6 +52,28 @@ body {
 .player:hover {
   -webkit-filter: none;
           filter: none;
+}
+
+.player__track-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+}
+
+.player__track-info .track-info__name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.player__track-info .track-info__author {
+  text-align: center;
+  opacity: 0.8;
 }
 
 .player__track-time {
@@ -111,6 +133,8 @@ body {
 
 .player__toolbar .toolbar__previous-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .player__toolbar .toolbar__play-btn {
@@ -131,6 +155,8 @@ body {
 
 .player__toolbar .toolbar__play-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .player__toolbar .toolbar__next-btn {
@@ -151,6 +177,8 @@ body {
 
 .player__toolbar .toolbar__next-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .player__track-progress > input {

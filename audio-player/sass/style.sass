@@ -28,11 +28,22 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
-    box-shadow: 0 0 10px #000000
+    box-shadow: 0 0 20px #000000
     // filter: blur(3px)
     transition: .5s
     &:hover
         filter: none
+    &__track-info
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        .track-info__name
+            text-align: center
+            font-size: 18px
+            font-weight: 500
+        .track-info__author
+            text-align: center
+            opacity: 0.8
     &__track-time
         display: flex
         column-gap: 10px
@@ -67,6 +78,7 @@ body
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
             &__play-btn
                 width: 55px
                 height: 55px
@@ -82,6 +94,7 @@ body
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
             &__next-btn
                 width: 30px
                 height: 30px
@@ -97,6 +110,7 @@ body
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
     &__track-progress
         & > input
             width: 250px

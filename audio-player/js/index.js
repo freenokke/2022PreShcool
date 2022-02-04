@@ -71,7 +71,7 @@ function previousAudio() {
         trackAuthor.textContent = playList[pos-1].author
         trackName.textContent = playList[pos-1].title
         trackIMG.style.backgroundImage = `url(${playList[pos-1].poster})`;
-    }    
+    } 
     audio.play()
 }
 
