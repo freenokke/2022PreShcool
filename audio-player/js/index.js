@@ -93,6 +93,8 @@ prevBtn.addEventListener('click', previousAudio);
 
     //Изменение прогресса трека по клику
 progressBar.addEventListener('input', updateProgressOnClick);
+    // Переключения трека, когда текущий закончился
+audio.addEventListener('ended', nextAudio)
 
     //подгрузка значений продолжительности трека и запуск обработчика событий текущего времени
 audio.addEventListener('loadeddata', (e) => {
