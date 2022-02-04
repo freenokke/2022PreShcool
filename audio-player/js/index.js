@@ -1,7 +1,7 @@
 import playList from "./playList.js";
 
 //объявление переменных
-const audio = new Audio(playList[0].src);
+const audio = new Audio();
 // console.log("🚀 ~ file: index.js ~ line 5 ~ playList[0].src", playList[0].src)
 const progressBar = document.querySelector('input');
 const prevBtn = document.querySelector('.toolbar__previous-btn')
@@ -27,13 +27,29 @@ function updateProgressOnClick() {
 }
 
 function nextAudio() {
-        audio.src = playList[1].src
-        audio.play()
+    const track = playList.find((item) => audio.src.includes(item.src.substring(1)));
+    const pos = playList.indexOf(track);
     
+    if (pos < playList.length - 1) {
+        audio.src = playList[pos+1].src
+    } else {
+        audio.src = playList[0].src
+    }
+    audio.play()
 }
 
 function previousAudio() {
-
+    const track = playList.find((item) => audio.src.includes(item.src.substring(1)));
+    const pos = playList.indexOf(track);
+    console.log("🚀 ~ file: index.js ~ line 32 ~ nextAudio ~ pos", pos)
+    
+    if (pos < playList.length - 1) {
+        audio.src = playList[pos+1].src
+    } else {
+        audio.src = playList[0].src
+    }
+    
+    audio.play()
 }
 
 //Обработчики
@@ -42,6 +58,7 @@ audio.addEventListener('timeupdate', updateProgress);
 
     //Работа кнопок
 playBtn.addEventListener('click', togglePlayAudio);
+nextBtn.addEventListener('click', nextAudio);
 nextBtn.addEventListener('click', nextAudio);
 
     //Изменение прогресса трека по клику
@@ -60,7 +77,8 @@ audio.addEventListener('loadeddata', (e) => {
     //Обновление текущего времени трека
     audio.addEventListener('timeupdate', updateTime);
 })
-
+    //Подгрузка первого трека при загрузке / обновлении страницы
+document.addEventListener('DOMContentLoaded', () => audio.src = playList[0].src)
 //     //Подгрузка продолжительности трека в инпут при изменении трека
 // audio.addEventListener('durationchange', () => {
 //     audioDuration = audio.duration
