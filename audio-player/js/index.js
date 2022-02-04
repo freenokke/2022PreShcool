@@ -2,7 +2,6 @@ import playList from "./playList.js";
 
 //объявление переменных
 const audio = new Audio();
-// console.log("🚀 ~ file: index.js ~ line 5 ~ playList[0].src", playList[0].src)
 const progressBar = document.querySelector('input');
 const prevBtn = document.querySelector('.toolbar__previous-btn')
 const playBtn = document.querySelector('.toolbar__play-btn')
@@ -13,6 +12,7 @@ const currentTimeMinutes = document.querySelector('.current-time__minutes')
 const currentTimeSeconds = document.querySelector('.current-time__seconds')
 const trackName = document.querySelector('.track-info__name')
 const trackAuthor = document.querySelector('.track-info__author')
+const trackIMG = document.querySelector('.player__track-img')
 
 function togglePlayAudio() {
     let method = audio.paused ? 'play' : 'pause';
@@ -36,10 +36,13 @@ function nextAudio() {
         audio.src = playList[pos+1].src
         trackAuthor.textContent = playList[pos+1].author
         trackName.textContent = playList[pos+1].title
+        trackIMG.style.backgroundImage = `url(${playList[pos+1].poster})`;
+
     } else {
         audio.src = playList[0].src
         trackAuthor.textContent = playList[0].author
         trackName.textContent = playList[0].title
+        trackIMG.style.backgroundImage = `url(${playList[0].poster})`;
     }
     audio.play()
 }
@@ -63,6 +66,7 @@ function preload() {
     audio.src = playList[0].src
     trackAuthor.textContent = playList[0].author
     trackName.textContent = playList[0].title
+    trackIMG.style.backgroundImage = `url(${playList[0].poster})`;
 }
 
 //Обработчики
@@ -77,7 +81,7 @@ prevBtn.addEventListener('click', previousAudio);
     //Изменение прогресса трека по клику
 progressBar.addEventListener('input', updateProgressOnClick);
 
-//подгрузка значений продолжительности трека и запуск обработчика событий текущего времени
+    //подгрузка значений продолжительности трека и запуск обработчика событий текущего времени
 audio.addEventListener('loadeddata', (e) => {
     progressBar.setAttribute('max', audio.duration);
     function updateTime(ev) {
