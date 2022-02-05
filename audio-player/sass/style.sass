@@ -112,9 +112,23 @@ body
                     opacity: 1
                     transform: scale(1.1)
     &__track-progress
-        & > input
-            width: 250px
+        .inp
+            width: 280px
             cursor: pointer
             border: none
             outline: none
+            background: linear-gradient(to right, #C6A780 0%, #C6A780 0%, #92a8af 0%, #92a8af 100%)
+            border-radius: 8px
+            height: 7px
+            outline: none
+            transition: background 450ms ease-in
+            -webkit-appearance: none
+            &::-webkit-slider-thumb
+                width: 10px
+                height: 13px
+                border-radius: 50%
+                -webkit-appearance: none
+                cursor: ew-resize
+                background: #fff
+    
 

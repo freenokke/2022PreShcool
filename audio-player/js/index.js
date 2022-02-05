@@ -26,8 +26,9 @@ function changePlayIcon() {
 }
 
 function updateProgress(e) {
-    // progressBar.setAttribute('max', e.srcElement.duration);    перенесен в событие DOMContentLoaded
-    progressBar.value = e.srcElement.currentTime
+    progressBar.value = e.srcElement.currentTime //для ползунка
+    const value = e.srcElement.currentTime / e.srcElement.duration * 100 // для бэкраунда
+    progressBar.style.background = `linear-gradient(to right, #C6A780 0%, #C6A780 ${value}%, #92a8af ${value}%, #92a8af 100%)` // для бэкраунда
 }
 
 function updateProgressOnClick() {
