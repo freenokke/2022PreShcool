@@ -110,6 +110,7 @@ body {
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .player__track-img {
@@ -149,6 +150,7 @@ body {
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .player__toolbar .toolbar__previous-btn:hover {
@@ -171,6 +173,7 @@ body {
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .player__toolbar .toolbar__play-btn:hover {
@@ -193,6 +196,7 @@ body {
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .player__toolbar .toolbar__next-btn:hover {
