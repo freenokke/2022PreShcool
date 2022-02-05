@@ -43,8 +43,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0 0 10px #000000;
-          box-shadow: 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 20px #000000;
+          box-shadow: 0 0 20px #000000;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -52,6 +52,29 @@ body {
 .player:hover {
   -webkit-filter: none;
           filter: none;
+}
+
+.player__track-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  min-height: 80px;
+}
+
+.player__track-info .track-info__name {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.player__track-info .track-info__author {
+  text-align: center;
+  opacity: 0.8;
 }
 
 .player__track-time {
@@ -70,8 +93,26 @@ body {
   color: #C6A780;
 }
 
+.player__volume-btn {
+  position: absolute;
+  right: 3px;
+  top: 378px;
+  width: 25px;
+  height: 25px;
+  background-image: url(./svg/volume.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: .5;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .player__track-img {
-  background-image: url(./img/lyusya-chebotina.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 250px;
@@ -112,6 +153,8 @@ body {
 
 .player__toolbar .toolbar__previous-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .player__toolbar .toolbar__play-btn {
@@ -124,7 +167,7 @@ body {
   background-color: transparent;
   border: 0;
   outline: 0;
-  opacity: .5;
+  opacity: .8;
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
@@ -132,6 +175,8 @@ body {
 
 .player__toolbar .toolbar__play-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .player__toolbar .toolbar__next-btn {
@@ -152,11 +197,61 @@ body {
 
 .player__toolbar .toolbar__next-btn:hover {
   opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.player__track-progress > input {
-  width: 250px;
+.player__track-progress .inp {
+  width: 280px;
   cursor: pointer;
   border: none;
   outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(#C6A780), color-stop(0%, #C6A780), color-stop(0%, #92a8af), to(#92a8af));
+  background: linear-gradient(to right, #C6A780 0%, #C6A780 0%, #92a8af 0%, #92a8af 100%);
+  border-radius: 8px;
+  height: 8px;
+  outline: none;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.player__track-progress .inp::-webkit-slider-thumb {
+  width: 10px;
+  height: 13px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #fff;
+}
+
+.player__volume-progress {
+  position: absolute;
+  top: 260px;
+  right: -75px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.player__volume-progress .inp-volume {
+  -webkit-appearance: none;
+  width: 180px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(#C6A780), color-stop(50%, #C6A780), color-stop(50%, #92a8af), to(#92a8af));
+  background: linear-gradient(to right, #C6A780 0%, #C6A780 50%, #92a8af 50%, #92a8af 100%);
+  height: 5px;
+  -webkit-transition: background 450ms ease-in;
+  transition: background 450ms ease-in;
+  border-radius: 8px;
+}
+
+.player__volume-progress .inp-volume::-webkit-slider-thumb {
+  width: 10px;
+  height: 13px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: #fff;
 }

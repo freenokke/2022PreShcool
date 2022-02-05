@@ -28,16 +28,19 @@
                 <span class="total-time__seconds">00</span>
             </div>
         </div>
-        <div src="./img/lyusya-chebotina.jpg" class="player__track-img"></div>
+        <div class="player__track-img"></div>
         <div class="player__track-progress">
-            <input type="range" value="0">
+            <input type="range" value="0" class="inp">
         </div>
         <div class="player__toolbar">
             <button type="button" class="toolbar__previous-btn"></button>
             <button type="button" class="toolbar__play-btn"></button>
             <button type="button" class="toolbar__next-btn"></button>
         </div>
-
+        <div class="player__volume-progress">
+            <input type="range" value="0.5" step="0.05" min="0" max="1" class="inp-volume">
+        </div>
+        <button type="button" class="player__volume-btn"></button>
     </div>
 
 </body>

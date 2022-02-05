@@ -28,11 +28,23 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
-    box-shadow: 0 0 10px #000000
+    box-shadow: 0 0 20px #000000
     // filter: blur(3px)
     transition: .5s
     &:hover
         filter: none
+    &__track-info
+        display: flex
+        flex-direction: column
+        row-gap: 10px
+        min-height: 80px
+        .track-info__name
+            text-align: center
+            font-size: 18px
+            font-weight: 500
+        .track-info__author
+            text-align: center
+            opacity: 0.8
     &__track-time
         display: flex
         column-gap: 10px
@@ -40,10 +52,26 @@ body
         opacity: 0.8
         .total-time
             color: #C6A780
+    &__volume-btn
+        position: absolute
+        right: 3px
+        top: 378px
+        width: 25px
+        height: 25px
+        background-image: url(./svg/volume.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        background-color: transparent
+        border: 0
+        outline: 0
+        opacity: .5
+        cursor: pointer
+        transition: .3s
     &__track-img
-        background-image: url(./img/lyusya-chebotina.jpg)
         background-repeat: no-repeat
         background-size: contain
+        background-position: 
         width: 250px
         height: 250px
         border-radius: 50%
@@ -68,6 +96,7 @@ body
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
             &__play-btn
                 width: 55px
                 height: 55px
@@ -78,11 +107,12 @@ body
                 background-color: transparent
                 border: 0
                 outline: 0
-                opacity: .5
+                opacity: .8
                 cursor: pointer
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
             &__next-btn
                 width: 30px
                 height: 30px
@@ -98,10 +128,48 @@ body
                 transition: .3s
                 &:hover
                     opacity: 1
+                    transform: scale(1.1)
     &__track-progress
-        & > input
-            width: 250px
+        .inp
+            width: 280px
             cursor: pointer
             border: none
             outline: none
+            background: linear-gradient(to right, #C6A780 0%, #C6A780 0%, #92a8af 0%, #92a8af 100%)
+            border-radius: 8px
+            height: 8px
+            outline: none
+            transition: background 450ms ease-in
+            -webkit-appearance: none
+            &::-webkit-slider-thumb
+                width: 10px
+                height: 13px
+                border-radius: 50%
+                -webkit-appearance: none
+                cursor: ew-resize
+                background: #fff
+    &__volume-progress
+        position: absolute
+        top: 260px
+        right: -75px
+        transform: rotate(-90deg)
+        .inp-volume
+            -webkit-appearance: none
+            width: 180px
+            cursor: pointer
+            border: none
+            outline: none
+            background: linear-gradient(to right, #C6A780 0%, #C6A780 50%, #92a8af 50%, #92a8af 100%)
+            height: 5px
+            transition: background 450ms ease-in
+            border-radius: 8px
+            &::-webkit-slider-thumb
+                width: 10px
+                height: 13px
+                border-radius: 50%
+                -webkit-appearance: none
+                cursor: ew-resize
+                background: #fff
+            
+
 
