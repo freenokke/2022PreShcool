@@ -7,11 +7,7 @@ const progressBar = document.querySelector('.inp');
 const volumeBar = document.querySelector('.inp-volume');
 const playBtn = document.querySelector('.toolbar__play-btn')
 const nextBtn = document.querySelector('.toolbar__next-btn')
-<<<<<<< HEAD
-
-=======
 const volumeBtn = document.querySelector('.player__volume-btn')
->>>>>>> audio-player
 const totalTimeMinutes = document.querySelector('.total-time__minutes')
 const totalTimeSeconds = document.querySelector('.total-time__seconds')
 const currentTimeMinutes = document.querySelector('.current-time__minutes')
