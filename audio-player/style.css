@@ -213,7 +213,7 @@ body {
   background: -webkit-gradient(linear, left top, right top, from(#C6A780), color-stop(0%, #C6A780), color-stop(0%, #92a8af), to(#92a8af));
   background: linear-gradient(to right, #C6A780 0%, #C6A780 0%, #92a8af 0%, #92a8af 100%);
   border-radius: 8px;
-  height: 8px;
+  height: 6px;
   outline: none;
   -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
@@ -221,12 +221,12 @@ body {
 }
 
 .player__track-progress .inp::-webkit-slider-thumb {
-  width: 10px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   -webkit-appearance: none;
   cursor: ew-resize;
-  background: #fff;
+  background: #d8d8d8;
 }
 
 .player__volume-progress {
@@ -252,10 +252,9 @@ body {
 }
 
 .player__volume-progress .inp-volume::-webkit-slider-thumb {
-  width: 10px;
-  height: 13px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   -webkit-appearance: none;
-  cursor: ew-resize;
-  background: #fff;
+  background: #d8d8d8;
 }
