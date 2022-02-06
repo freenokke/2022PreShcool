@@ -75,7 +75,6 @@ function nextAudio() {
         trackAuthor.textContent = playList[pos+1].author
         trackName.textContent = playList[pos+1].title
         trackIMG.style.backgroundImage = `url(${playList[pos+1].poster})`;
-
     } else {
         audio.src = playList[0].src
         trackAuthor.textContent = playList[0].author
@@ -141,7 +140,7 @@ audio.addEventListener('loadeddata', (e) => {
         currentTimeSeconds.textContent = Math.trunc(audio.currentTime % 60).toString().padStart('2', 0)
     }
     totalTimeMinutes.textContent = '0' + Math.trunc(audio.duration / 60)
-    totalTimeSeconds.textContent = Math.trunc(audio.duration % 60)
+    totalTimeSeconds.textContent = Math.trunc(audio.duration % 60).toString().padStart('2', 0)
     
     //Обновление текущего времени трека
     audio.addEventListener('timeupdate', updateTime);
