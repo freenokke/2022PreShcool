@@ -82,6 +82,7 @@ function nextAudio() {
         trackIMG.style.backgroundImage = `url(${playList[0].poster})`;
     }
     audio.play()
+    changePlayIcon()
 }
 
 function previousAudio() {
@@ -104,6 +105,7 @@ function previousAudio() {
         trackIMG.style.backgroundImage = `url(${playList[pos-1].poster})`;
     } 
     audio.play()
+    changePlayIcon()
 }
 
 function preload() {
