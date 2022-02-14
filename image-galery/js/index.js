@@ -1,5 +1,8 @@
 const container = document.querySelector('.container-image')
-const input = document.querySelector('input')
+const searchBlock = document.querySelector('.search')
+const input = document.querySelector('.search__input')
+const inputBtn = document.querySelector('.search__btn')
+const inputResetBtn = document.querySelector('.search__btn-reset')
 
 function createElem(src) {
     const img = document.createElement('img')
@@ -30,6 +33,20 @@ async function search() {
 input.addEventListener('keyup', function(event) {
     if(event.key == 'Enter'){
         search();
-        input.value = '';
     }
+    inputResetBtn.style.display = 'block';
+    input.classList.remove('round')
+    if (input.value == '') {
+        inputResetBtn.style.display = 'none';
+        input.classList.add('round')
+    }
+})
+
+
+inputBtn.addEventListener('click', search)
+inputResetBtn.addEventListener('click', function() {
+    input.value = '';
+    inputResetBtn.style.display = 'none'
+    input.classList.add('round')
+    input.focus();
 })
