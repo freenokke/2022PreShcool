@@ -1,0 +1,95 @@
+*, html
+    box-sizing: border-box
+    font-family: serif
+    font-size: 80px
+body
+    height: 100vh
+    margin: 0
+    padding: 0
+    overflow: hidden
+    background: linear-gradient(#3ed9e4, #71ddf8)
+.container
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+.game-area
+    border-collapse: collapse
+    &__cell
+        text-align: center
+        vertical-align: middle
+        width: 100px
+        height: 100px
+        border: 5px solid #eedf12
+        cursor: pointer
+        transition: all 1s linear
+        color: #fff
+        &:hover
+            background: #eedf1273
+    tr:last-child td
+        border-bottom: 0
+    tr:first-child td
+        border-top: 0
+    tr td:first-child
+        border-left: 0
+    tr td:last-child
+        border-right: 0
+.replay-btn
+    position: absolute
+    top: 10%
+    font-size: 40px
+
+.modal
+    width: 200px
+    height: 200px
+    position: absolute
+    top: 10%
+    transition: all 1s linear
+    font-size: 20px
+
+.endgame
+    background-color: red
+    top: 10%
+    left: -200px
+
+.score
+    background-color: green
+    top: 10%
+    // right: -200px
+
+.overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: #000
+    opacity: 0.3
+
+
+@keyframes example 
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+
+
+.animation
+    animation-name: example
+    animation-duration: 1s
+    animation-iteration-count: 1
+
+.cross
+    height: 1px
+    width: 100%
+    display: block
+    position: absolute
+    top: 50%
+    transform: rotate(45deg)
+    background: #fff
+    animation-name: across
+    animation-duration: 1s
+    animation-iteration-count: 1
+
+@keyframes across 
+    0% { width: 0% }
+    100% { width: 100% }
